@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  html{
+    scroll-behavior: smooth
   }
+  
+  body {
+    @apply  bg-full-page bg-fixed relative;
+  }
+
+  button{
+    @apply  transition-all duration-100 hover:scale-105  }
+
+    input{
+      @apply px-4 py-2  rounded-full focus:outline-none focus:ring;
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .btn{
+    @apply self-start px-4 py-2 text-sm capitalize rounded-md;
+  }
+
+  .btn-danger{
+    @apply  bg-red-600 border-red-600 text-white;
+  }
+
+
+
+  .btn-primary{
+    @apply border bg-violet-400 bg-violet-400 text-white
+  }
+
+  .btn-primary-outline{
+    @apply border border-red-400 text-red-600
+  }
+
+  .input-group{
+    @apply flex flex-col gap-4;
+  }
 }
