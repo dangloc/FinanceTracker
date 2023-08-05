@@ -11,7 +11,7 @@ function SingIn() {
     return (
         <main className="container max-w-2xl px-6 mx-auto">
             <div className="flex overflow-hidden shadow-md shadow-slate-500 bg-full-page rounded-2xl">
-                <div className="h-40 lg:h-80 w-full">
+                <div className="h-40 lg:h-[30rem] w-full">
                     <Image className="w-full h-full object-cover"
                         priority
                         src={bgSingIn}
