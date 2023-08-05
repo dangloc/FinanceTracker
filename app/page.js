@@ -88,14 +88,13 @@ export default function Home() {
         <section className="py-6">
           <a id="stats"></a>
           <h3 className="text-2xl">Biểu đồ</h3>
-
           <div className="w-1/2 mx-auto">
             <Doughnut
               data={{
                 labels: expenses.map((data) => data.title),
                 datasets: [
                   {
-                    label: "expense",
+                    label: "Chi tiêu",
                     data: expenses.map((data) => data.total),
                     backgroundColor: expenses.map((data) => data.color),
                     borderWidth: 1,

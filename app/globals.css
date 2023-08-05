@@ -25,6 +25,10 @@
     @apply self-start px-4 py-2 text-sm capitalize rounded-md;
   }
 
+  .max-w-2xl{
+    @apply max-w-[1024px]
+  }
+
   .btn-danger{
     @apply  bg-red-600 border-red-600 text-white;
   }
