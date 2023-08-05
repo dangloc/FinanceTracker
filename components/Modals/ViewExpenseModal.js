@@ -50,8 +50,8 @@ function ViewExpenseModal({ show, onClose, expense }) {
                         <div className="flex items-center justify-between mb-2" key={item.id}>
                             <small>
                                 {item.createdAt.toMillis
-                                    ? new Date(item.createdAt.toMillis()).toISOString()
-                                    : item.createdAt.toISOString()}
+                                    ? new Date(item.createdAt.toMillis()).toISOString().split("T")[0]
+                                    : item.createdAt.toISOString().split("T")[0]}
                             </small>
 
                             <p className="flex items-center gap-4">{currentFormatter(item.amount)} 
